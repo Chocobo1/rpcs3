@@ -47,7 +47,7 @@ before_install:
     fi;
 
 before_script:
-  - git submodule update --init rsx_program_decompiler asmjit 3rdparty/ffmpeg 3rdparty/pugixml 3rdparty/GSL 3rdparty/libpng Utilities/yaml-cpp 3rdparty/cereal
+  - git submodule update --init --jobs 5 rsx_program_decompiler asmjit 3rdparty/ffmpeg 3rdparty/pugixml 3rdparty/GSL 3rdparty/libpng Utilities/yaml-cpp 3rdparty/cereal
   - mkdir build
   - cd build
   - if [ "$TRAVIS_OS_NAME" = "linux" ]; then
